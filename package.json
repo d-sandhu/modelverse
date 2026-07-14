@@ -8,6 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
+    "postinstall": "pnpm --filter @modelverse/api prisma:generate",
     "create:world": "tsx scripts/create-world.ts",
     "dev": "pnpm --parallel --filter @modelverse/web --filter @modelverse/api dev",
     "build": "pnpm -r --if-present build",
