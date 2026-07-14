@@ -1,0 +1,35 @@
+{
+  "name": "modelverse",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "packageManager": "pnpm@11.1.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "create:world": "tsx scripts/create-world.ts",
+    "dev": "pnpm --parallel --filter @modelverse/web --filter @modelverse/api dev",
+    "build": "pnpm -r --if-present build",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc -p scripts/tsconfig.json --noEmit && pnpm -r --if-present typecheck",
+    "test": "vitest run && pnpm --filter @modelverse/api test:api",
+    "test:e2e": "pnpm --filter @modelverse/web test:e2e",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/node": "^24.0.13",
+    "eslint": "^9.31.0",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0",
+    "vite": "^7.0.4",
+    "vitest": "^3.2.4"
+  }
+}

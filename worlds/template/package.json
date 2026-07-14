@@ -1,0 +1,27 @@
+{
+  "name": "@modelverse/world-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run src/index.test.ts"
+  },
+  "dependencies": {
+    "@modelverse/input-system": "workspace:*",
+    "@modelverse/world-sdk": "workspace:*",
+    "react": "^19.1.0",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@modelverse/provenance": "workspace:*",
+    "@modelverse/testing": "workspace:*",
+    "@types/react": "^19.1.8",
+    "@types/three": "^0.178.1",
+    "vitest": "^3.2.4"
+  }
+}

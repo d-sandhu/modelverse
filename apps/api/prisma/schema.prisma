@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Session {
+  id        String          @id @default(cuid())
+  clientId  String?
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  progress  WorldProgress[]
+  scores    Score[]
+  guesses   ModelGuess[]
+  ratings   WorldRating[]
+}
+
+model World {
+  id          String          @id
+  title       String
+  description String
+  version     String
+  published   Boolean         @default(false)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  progress    WorldProgress[]
+  scores      Score[]
+  guesses     ModelGuess[]
+  ratings     WorldRating[]
+  provenance  Provenance?
+}
+
+model WorldProgress {
+  id            String   @id
+  sessionId     String
+  worldId       String
+  schemaVersion Int
+  value         Json
+  updatedAt     DateTime @updatedAt
+  session       Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  world         World    @relation(fields: [worldId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, worldId])
+}
+
+model Score {
+  id        String   @id @default(cuid())
+  sessionId String
+  worldId   String
+  category  String
+  value     Float
+  metadata  Json
+  createdAt DateTime @default(now())
+  session   Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  world     World    @relation(fields: [worldId], references: [id], onDelete: Cascade)
+
+  @@index([worldId, category, value])
+}
+
+model ModelGuess {
+  id        String   @id @default(cuid())
+  sessionId String
+  worldId   String
+  guess     String
+  createdAt DateTime @default(now())
+  session   Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  world     World    @relation(fields: [worldId], references: [id], onDelete: Cascade)
+}
+
+model WorldRating {
+  id        String   @id @default(cuid())
+  sessionId String
+  worldId   String
+  rating    Int
+  createdAt DateTime @default(now())
+  session   Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  world     World    @relation(fields: [worldId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, worldId])
+}
+
+model Provenance {
+  id        String   @id @default(cuid())
+  worldId   String   @unique
+  data      Json
+  updatedAt DateTime @updatedAt
+  world     World    @relation(fields: [worldId], references: [id], onDelete: Cascade)
+}
+
+model AnalyticsEvent {
+  id         String   @id @default(cuid())
+  sessionId  String?
+  name       String
+  properties Json
+  createdAt  DateTime @default(now())
+
+  @@index([name, createdAt])
+}

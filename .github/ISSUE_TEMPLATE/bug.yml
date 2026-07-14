@@ -1,0 +1,19 @@
+name: Bug report
+description: Report a reproducible Modelverse defect
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      {
+        label: Reproduction,
+        description: Include browser,
+        device,
+        world,
+        steps,
+        expected result,
+        and actual result.,
+      }
+    validations: { required: true }
+  - type: textarea
+    id: logs
+    attributes: { label: Logs or screenshots }

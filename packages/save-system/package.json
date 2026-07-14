@@ -1,0 +1,15 @@
+{
+  "name": "@modelverse/save-system",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@modelverse/shared-types": "workspace:*"
+  }
+}

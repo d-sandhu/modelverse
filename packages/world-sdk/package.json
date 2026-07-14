@@ -1,0 +1,25 @@
+{
+  "name": "@modelverse/world-sdk",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/three": "^0.178.1",
+    "react": "^19.1.0",
+    "three": "^0.178.0"
+  }
+}
