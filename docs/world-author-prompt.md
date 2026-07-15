@@ -89,6 +89,8 @@ If the SDK lacks a required capability, document the request in `worlds/<WORLD_I
 
 ### Platform contract
 
+Physical portals are a standard Modelverse primitive. Implement only their owner-approved world-side placement and presentation, declare them through the public SDK, and leave loading, crossing, transfer, previews, and failure handling to the platform.
+
 The platform owns:
 
 - the one application canvas and WebGL renderer;

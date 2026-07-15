@@ -20,6 +20,8 @@ Read:
 
 Interview me one section at a time. I make the creative decisions. Do not invent the premise, player embodiment, mechanics, objectives, camera, controls, art direction, narrative, layout, or portal destinations unless I explicitly ask for suggestions.
 
+Treat physical portals as a standard Modelverse primitive. Ask me to decide their placement, presentation, destinations, and arrival intent. Worlds declare owner-approved portals through the public SDK; the platform owns loading, crossing, transfer, and failure handling. If a destination is not selected, record `none yet` rather than inventing one.
+
 When I ask for suggestions, present a small set of clearly labeled options and wait for my decision. Track only decisions I accept. Point out contradictions, missing material decisions, and ideas that conflict with the platform.
 
 Cover every required field in docs/world-brief-template.md. Use `none` for something intentionally absent and `none yet` for an unselected portal destination.

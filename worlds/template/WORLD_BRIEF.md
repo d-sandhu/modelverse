@@ -44,7 +44,10 @@ Use `docs/world-brief-template.md` as the authoritative field guide.
 
 ## Portals and entry points
 
+Physical portals are a standard Modelverse primitive. The world declares owner-approved placement, presentation, and destinations; the platform owns cross-world travel. Use `none yet` rather than inventing an unselected destination.
+
 - Entry points: `<required>`
+- Portal placement and presentation: `<required or none yet>`
 - Outbound portals: `<owner-approved destinations or none yet>`
 - Arrival constraints: `<required>`
 

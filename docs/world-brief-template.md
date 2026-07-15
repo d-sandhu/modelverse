@@ -42,9 +42,10 @@ This file is completed by the project owner before a model implements the world.
 
 ## Portals and entry points
 
-List only owner-approved connections. Use `none yet` when destinations have not been chosen; the model must not invent them.
+Physical portals are a standard Modelverse primitive. The world declares their owner-approved placement, presentation, and destinations through the SDK; the platform owns loading, crossing, transfer, and failure handling. Use `none yet` when destinations have not been chosen; the model must not invent them.
 
 - Entry points: `<IDs and intent>`
+- Portal placement and presentation: `<owner direction or none yet>`
 - Outbound portals: `<portal ID, destination world ID, destination entry ID, intent>`
 - Arrival constraints: `<clearance, facing, staging>`
 
