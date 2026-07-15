@@ -14,10 +14,11 @@
 
 Use this order:
 
-1. `world-brief-template.md` — the project owner defines the creative and technical assignment.
-2. `adding-a-world.md` — the owner prepares an isolated package and review flow.
-3. `world-author-prompt.md` — canonical prompt pasted into a fresh implementation-model chat.
-4. `worlds/template/` — unregistered copy-only package scaffold.
+1. `adding-a-world.md` — concise end-to-end owner workflow.
+2. `world-design-prompt.md` — fresh-chat interview that produces the owner brief without coding.
+3. `world-brief-template.md` — required creative and technical decisions.
+4. `world-author-prompt.md` — separate fresh-chat implementation assignment.
+5. `worlds/template/` — unregistered copy-only package scaffold.
 
 The owner chooses the worlds. Implementation models must not invent concepts or register themselves.
 

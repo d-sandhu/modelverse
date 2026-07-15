@@ -2,11 +2,11 @@
 
 ## How the project owner uses this
 
-1. Run `pnpm create:world <world-id>`.
-2. Fill in that package's `WORLD_BRIEF.md` using `docs/world-brief-template.md`.
-3. Run `pnpm install` to update workspace links and the lockfile.
+1. Complete the owner brief in a separate chat using `docs/world-design-prompt.md`.
+2. Run `pnpm create:world <world-id>` and replace the generated `WORLD_BRIEF.md`.
+3. Run `pnpm install` and commit the assignment baseline.
 4. Start a fresh coding-model chat with repository access.
-5. Paste the prompt below without adding unrelated world ideas.
+5. Paste the prompt below, replacing `<WORLD_ID>`.
 
 The world package remains unregistered while the authoring model works. Registry integration happens separately after review.
 

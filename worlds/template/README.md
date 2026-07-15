@@ -4,11 +4,11 @@ This is an unregistered, contract-complete scaffold. It contains no gameplay and
 
 ## Prepare an assignment
 
-1. From the repository root, run `pnpm create:world <world-id>`.
-2. Confirm the generated identifiers and replace the remaining template metadata.
-3. The project owner completes `WORLD_BRIEF.md`; implementation models do not fill creative placeholders.
-4. Run `pnpm install` so the new workspace and lockfile are ready.
-5. Copy the canonical assignment from `docs/world-author-prompt.md` into the fresh model chat and into `PROMPT.md`.
+1. Complete the owner brief in a separate chat using `docs/world-design-prompt.md`.
+2. From the repository root, run `pnpm create:world <world-id>`.
+3. Replace `WORLD_BRIEF.md` with the approved brief and confirm every generated ID.
+4. Run `pnpm install` and commit the assignment baseline.
+5. Copy `docs/world-author-prompt.md` into a separate fresh implementation chat and `PROMPT.md`.
 6. Keep the package unregistered until isolated implementation and review are complete.
 
 Read [the authoring guide](../../docs/adding-a-world.md) for the owner workflow and [the SDK contract](../../docs/world-sdk.md) for lifecycle rules.
